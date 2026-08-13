@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1370" height="430" viewBox="0 0 1370 430" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#57606a"/>
+    </marker>
+  </defs>
+
+  <rect x="1" y="1" width="1368" height="428" rx="14" fill="#ffffff" stroke="#d0d7de"/>
+
+  <text x="42" y="52" font-size="23" font-weight="bold" fill="#1f2328">The loop: spec &#8594; generate &#8594; review &#8594; test</text>
+  <text x="42" y="80" font-size="14.5" fill="#57606a">People own the spec and the review. The model owns the typing.</text>
+
+  <!-- stage boxes -->
+  <!-- SPEC -->
+  <rect x="40" y="110" width="250" height="130" rx="10" fill="#ffffff" stroke="#d0d7de" stroke-width="1.5"/>
+  <text x="62" y="141" font-size="19" font-weight="bold" fill="#1f2328">1 &#183; Spec</text>
+  <text x="62" y="168" font-size="13" fill="#57606a">Write down what right looks</text>
+  <text x="62" y="186" font-size="13" fill="#57606a">like before anyone prompts.</text>
+  <rect x="62" y="202" width="72" height="24" rx="12" fill="#ddf4ff"/>
+  <text x="98" y="218" font-size="11" font-weight="bold" fill="#0969da" text-anchor="middle" letter-spacing="0.5">HUMAN</text>
+
+  <!-- GENERATE -->
+  <rect x="330" y="110" width="250" height="130" rx="10" fill="#ffffff" stroke="#d0d7de" stroke-width="1.5"/>
+  <text x="352" y="141" font-size="19" font-weight="bold" fill="#1f2328">2 &#183; Generate</text>
+  <text x="352" y="168" font-size="13" fill="#57606a">The spec plus the relevant</text>
+  <text x="352" y="186" font-size="13" fill="#57606a">files. Not the whole repo.</text>
+  <rect x="352" y="202" width="72" height="24" rx="12" fill="#fff8c5"/>
+  <text x="388" y="218" font-size="11" font-weight="bold" fill="#9a6700" text-anchor="middle" letter-spacing="0.5">MODEL</text>
+
+  <!-- REVIEW -->
+  <rect x="620" y="110" width="250" height="130" rx="10" fill="#ffffff" stroke="#d0d7de" stroke-width="1.5"/>
+  <text x="642" y="141" font-size="19" font-weight="bold" fill="#1f2328">3 &#183; Review</text>
+  <text x="642" y="168" font-size="13" fill="#57606a">Read the diff itself, not the</text>
+  <text x="642" y="186" font-size="13" fill="#57606a">model's summary of it.</text>
+  <rect x="642" y="202" width="72" height="24" rx="12" fill="#ddf4ff"/>
+  <text x="678" y="218" font-size="11" font-weight="bold" fill="#0969da" text-anchor="middle" letter-spacing="0.5">HUMAN</text>
+
+  <!-- TEST -->
+  <rect x="910" y="110" width="250" height="130" rx="10" fill="#ffffff" stroke="#d0d7de" stroke-width="1.5"/>
+  <text x="932" y="141" font-size="19" font-weight="bold" fill="#1f2328">4 &#183; Test</text>
+  <text x="932" y="168" font-size="13" fill="#57606a">Checks that go red when the</text>
+  <text x="932" y="186" font-size="13" fill="#57606a">behaviour actually breaks.</text>
+  <rect x="932" y="202" width="94" height="24" rx="12" fill="#ddf4ff"/>
+  <text x="979" y="218" font-size="11" font-weight="bold" fill="#0969da" text-anchor="middle" letter-spacing="0.5">HUMAN + CI</text>
+
+  <!-- forward arrows -->
+  <line x1="290" y1="175" x2="324" y2="175" stroke="#57606a" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="580" y1="175" x2="614" y2="175" stroke="#57606a" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="870" y1="175" x2="904" y2="175" stroke="#57606a" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="1160" y1="175" x2="1218" y2="175" stroke="#57606a" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- merge -->
+  <rect x="1224" y="145" width="104" height="60" rx="10" fill="#dafbe1"/>
+  <text x="1276" y="181" font-size="16" font-weight="bold" fill="#1a7f37" text-anchor="middle">merge</text>
+
+  <!-- feedback: review -> spec -->
+  <polyline points="745,240 745,296 165,296 165,246" fill="none" stroke="#9a6700" stroke-width="1.8" stroke-dasharray="6 5" marker-end="url(#arr)"/>
+  <text x="340" y="288" font-size="13" fill="#9a6700" text-anchor="middle">same gap again &#8594; the spec was vague, fix it there</text>
+
+  <!-- feedback: test -> generate -->
+  <polyline points="1035,240 1035,362 520,362 520,246" fill="none" stroke="#9a6700" stroke-width="1.8" stroke-dasharray="6 5" marker-end="url(#arr)"/>
+  <text x="785" y="354" font-size="13" fill="#9a6700" text-anchor="middle">checks fail &#8594; regenerate against the spec, don't hand-patch it blind</text>
+
+  <text x="42" y="408" font-size="12.5" fill="#8b949e">ai-dev-playbook &#183; github.com/omarmaali/ai-dev-playbook</text>
+</svg>

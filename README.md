@@ -46,7 +46,9 @@ If you're one developer: take `task-spec.md` and the review checklist, run one r
 
 If you're leading a team: read guides 1 and 3, adapt the working agreement to your tools and data, then follow the rollout plan in guide 5. Resist the urge to adopt everything at once. The teams I've seen succeed started with two or three task classes and a pilot group.
 
-Everything here is tool-agnostic. It assumes an assistant that can read files and produce diffs, and nothing more specific than that.
+If you want to run it as training: [ai-dev-onboarding-program](https://github.com/omarmaali/ai-dev-onboarding-program) is the four-module course built on these guides, with exercises, knowledge checks, a graded capstone and a facilitator guide.
+
+Everything here is tool-agnostic. The first version was written for an assistant that reads the files you give it and produces a diff. Most teams now run agents that pick their own context, run the tests and sometimes commit. The loop is the same; the places where an agent changes the practice are marked in guides 1 to 3 and in the templates.
 
 ## What this playbook is not
 
@@ -55,6 +57,11 @@ It's not legal advice. The security and IP guide is an engineer's view of the ri
 It's not a benchmark report. You won't find "teams ship N% faster" claims here. I don't have numbers I'd defend on that, and I haven't seen anyone else's I'd defend either. What I can defend are the failure modes, because I've hit them.
 
 And it's not tied to any vendor. No tool is named as required, and no tool paid for a mention.
+
+## Changelog
+
+- **November 2026.** Updated for agents. Guide 1: the project instruction file as the place the working agreement lives, and usage as a shared team budget. Guide 2 and the checklist: an eighth failure mode, the test edited to pass. Guide 3 and the working agreement: what a tool may run, next to what it may see. Linked the training companion.
+- **August 2026.** First version.
 
 ## License
 

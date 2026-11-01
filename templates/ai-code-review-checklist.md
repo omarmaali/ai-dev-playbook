@@ -40,6 +40,7 @@ Two or more blockers in the first three sections? Consider rejecting wholesale a
 - [ ] No test asserts a value it just configured a mock to return
 - [ ] Tests build their own fixtures; none read my environment, my files or my database
 - [ ] Guardrail/money/permission logic: the check was disabled or inverted at least once and the suite went red (see [docs/04](../docs/04-evaluating-ai-code.md))
+- [ ] No existing test was weakened, skipped or deleted to get to green; the test files were diffed on their own
 
 ## Housekeeping
 

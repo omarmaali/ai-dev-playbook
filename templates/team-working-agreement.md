@@ -8,12 +8,12 @@ One page, on purpose. Fill in the brackets, delete what doesn't apply, get it re
 
 ## Approved tools
 
-| Tool | Tier / agreement | Approved for |
-|---|---|---|
-| [e.g. Assistant X] | [Enterprise agreement, no-training, SSO] | [company code and internal docs] |
-| [e.g. Chatbot Y free tier] | [consumer terms] | [public information only] |
+| Tool | Tier / agreement | Approved for | May run without asking |
+|---|---|---|---|
+| [e.g. Agent X] | [Enterprise agreement, no-training, SSO] | [company code and internal docs] | [read the repo, run the test suite; package installs and git push need a confirmation; never a push to main] |
+| [e.g. Chatbot Y free tier] | [consumer terms] | [public information only] | [nothing; no repo access] |
 
-Anything not in this table isn't approved. To add a tool, ask [owner]; the answer includes reading the data terms, not just the price.
+Anything not in this table isn't approved. To add a tool, ask [owner]; the answer includes reading the data terms and the tool's execution defaults, not just the price.
 
 ## Data rules
 
@@ -31,7 +31,8 @@ Repo-context tools index what they can see. `.env`, dumps, and credential stores
 - Sanctioned task classes right now: [e.g. tests for existing code, refactors under green tests, scaffolding]. This list grows at retro, not ad hoc.
 - AI-assisted code goes through the normal PR process, reviewed with [the checklist](ai-code-review-checklist.md). Same bar as human code. The author must be able to explain any line on request; "the model wrote it" isn't an explanation.
 - Whoever merges owns the merge. No exceptions by seniority, in either direction.
-- Tests: the model may draft them, the task owner decides what gets asserted.
+- Tests: the model may draft them, the task owner decides what gets asserted. The model may not change an existing test to make it pass; a red test gets reported and the task owner decides.
+- This agreement, or a trimmed copy of it, is committed as the assistant's project instruction file ([CLAUDE.md / AGENTS.md / .cursorrules]) so every session starts with it.
 - New dependencies proposed by a model get the same vetting as any other new dependency.
 
 ## Cadence

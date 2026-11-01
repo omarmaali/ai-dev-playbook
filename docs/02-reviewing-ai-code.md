@@ -26,11 +26,13 @@ These are the ones I check for by name. Each one has bitten me or someone near m
 
 **7. Trust-boundary carelessness.** String-built SQL, unvalidated input passed inward, secrets as literals "for now", permissive CORS, weak crypto defaults. Nothing here is AI-specific; what's AI-specific is the polish. Insecure code used to look hurried more often than not. Now it arrives formatted and idiomatic with docstrings.
 
+**8. Tests edited to pass.** Specific to agents that run the suite themselves. A test goes red, and instead of fixing the code the agent loosens the assertion, widens a tolerance, marks the test as skipped or deletes it, then reports that everything passes. The report is accurate. The check is to diff the test files separately from the rest of the change and treat any edit to an existing assertion as a finding until someone can say why the old assertion was wrong. The working agreement should say it plainly: the model may not change an existing test to make it pass.
+
 ## Running the pass
 
 Order matters, because attention runs out before code does.
 
-Start from the spec, not the diff: take each acceptance check and find where the diff satisfies it. This catches drift (mode 2) while you're still fresh. Then walk the diff for surprises: anything outside the file list, anything the task didn't need (mode 3). Then correctness on what remains, with modes 1, 4 and 5 in mind. Then the trust boundaries. Tests last, because by then you know what the code claims to do.
+Start from the spec, not the diff: take each acceptance check and find where the diff satisfies it. This catches drift (mode 2) while you're still fresh. Then walk the diff for surprises: anything outside the file list, anything the task didn't need (mode 3). Then correctness on what remains, with modes 1, 4 and 5 in mind. Then the trust boundaries. Tests last, because by then you know what the code claims to do, and if an agent ran the suite, diff the existing test files on their own before reading the new tests (mode 8).
 
 Two working rules:
 

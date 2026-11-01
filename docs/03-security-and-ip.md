@@ -37,6 +37,8 @@ Not all "AI tools" are one thing contractually, and the contract is what you're 
 
 Two habits make the table usable. First, someone specific owns it: reads the actual data-processing terms, not the marketing page, and re-checks when the vendor's terms change, which is often. Second, tools are approved by name and tier and listed in the [working agreement](../templates/team-working-agreement.md). "We use the ChatGPT" is not a policy; which offering, under which agreement, for which data, is.
 
+Agents add a second question to the table: not only what the tool may see, but what it may do. An agent with shell access can install packages, call the network, delete files and push commits, and the defaults differ by tool and change between versions. Record the answer per tool: what it may run without asking, what needs a human confirmation, and what is off entirely (pushing to a shared branch, touching production credentials, anything that leaves the sandbox). The [working agreement](../templates/team-working-agreement.md) has a column for it.
+
 This is the paragraph to take to counsel, together with your data classification. It's a short conversation when you arrive with a draft table, and a very long one when you arrive after an incident.
 
 ## What arrives: licensing and provenance

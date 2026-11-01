@@ -33,6 +33,10 @@ The model's stage. The craft here is context discipline, and it's mostly subtrac
 
 **Know when to stop.** Certain behaviours mean the session is done and the spec needs work, not the conversation: the model rewrites files outside its list, invents an API and defends it, or keeps "fixing" things you didn't raise. Arguing with drift wastes more time than restarting with a tighter spec. Restarting is normal here.
 
+**If the tool is an agent.** An agent that explores the repository on its own makes the curation advice above only half true: it chooses its own context and it reads whatever it can reach. Two things take curation's place. The first is the project instruction file (`CLAUDE.md`, `AGENTS.md`, `.cursorrules`, whichever your tool reads). It loads into every session, so it's where the team's conventions, the never-touch list and the test command belong, and the easiest way to keep it honest is to commit the [working agreement](../templates/team-working-agreement.md) there, or a trimmed copy of it. The second is the tool's ignore file, which decides what the agent can read at all; guide 3 says what goes in it. Plan-first matters more with an agent, since the diff arrives already written, tested and summarised, and the plan is the last point where a correction is cheap.
+
+**Usage is a shared budget.** On a team account, one developer's long, repository-wide session draws on the same pool as everyone else's work. One task per session and a tight file list were written above as quality rules; they're also the cheapest way to run the tool. A team that hits its limit mid-week should look at session length and context size before it asks for more seats.
+
 ## 3 · Review
 
 Human stage, and the one where AI-assisted work most often fails without anyone noticing at the time.
